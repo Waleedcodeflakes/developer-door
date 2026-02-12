@@ -3,20 +3,20 @@ import { motion as MOTION, AnimatePresence } from 'framer-motion';
 import { useInView } from "react-intersection-observer";
 import { ChevronDown } from 'lucide-react';
 // import minus from '../../../assets/icons/minus-circle.svg'
-// import plus from '../../../assets/icons/plus-circle.svg'
+import plus from '../../../assets/icons/plus-circle.svg'
 
 const Faqs = ({my, setShowForm}) => {
 
    const faqs = [
   {
-    question: "How does Developer Door Stylist recommend outfits?",
+    question: "How does Developer Door  recommend outfits?",
     answer:
-      "Developer Door Stylist uses AI to suggest outfits based on your wardrobe, personal style, body type, occasion, current fashion trends, and even the local temperature and weather."
+      "Developer Door  uses AI to suggest outfits based on your wardrobe, personal style, body type, occasion, current fashion trends, and even the local temperature and weather."
   },
   {
     question: "Can I try the app for free?",
     answer:
-      "Yes! You can use Developer Door Stylist for free by filling out a simple form to get early access. Free users can upload clothes, get AI outfit recommendations, and explore wardrobe planning features."
+      "Yes! You can use Developer Door  for free by filling out a simple form to get early access. Free users can upload clothes, get AI outfit recommendations, and explore wardrobe planning features."
   },
   {
     question: "What kind of analytics does the app provide?",
@@ -29,7 +29,7 @@ const Faqs = ({my, setShowForm}) => {
       "Upload photos directly from your phone or take snaps inside the app. You can categorizes your items for easy outfit planning."
   },
   {
-    question: "Does Developer Door Stylist plan outfits for different occasions?",
+    question: "Does Developer Door  plan outfits for different occasions?",
     answer:
       "Yes! The AI creates daily looks, special-event outfits, and weekly plans tailored to your style, mood, and weather."
   },
@@ -41,7 +41,7 @@ const Faqs = ({my, setShowForm}) => {
   {
     question: "Will it work for all body types and sizes?",
     answer:
-      "Yes! Developer Door Stylist provides personalized outfit suggestions for every body type, shape, and style preference."
+      "Yes! Developer Door  provides personalized outfit suggestions for every body type, shape, and style preference."
   },
   {
     question: "What about the virtual try-on feature?",
@@ -81,10 +81,12 @@ const [openIndex, setOpenIndex] = useState(null);
     };
 
   return (
-    <section className='w-[92%] m-auto' style={{marginTop: my ? my : 'my-20', marginBottom: my ? my : 'my-20'}}>
+    <section className='w-[92%] m-auto my-20'>
       <div className='text-center'>
-        <h3 className='my-1 poppins-semibold text-[26px] md:text-[36px] text-[#101828]'>Frequently asked questions</h3>
-        <p className='poppins-regular text-[18px] md:text-xl text-[#475467]'>Everything you need to know about the product and billing.</p>
+        <h3 className='text-3xl font-semibold tracking-tight text-[#333] sm:text-4xl'>Frequently asked questions</h3>
+        <p className='mt-4 text-lg text-gray-400'>Everything you need to know about hiring on Developer Door.
+
+</p>
       </div>
       {/* faqs */}
       <AnimatePresence>
@@ -106,7 +108,7 @@ const [openIndex, setOpenIndex] = useState(null);
             variants={item}
             transition={{ duration: 0.6, ease: "easeOut" }}
             
-            className={`rounded-lg mb-2 cursor-pointer transition-colors duration-300 ${ openIndex === index ? "bg-[#E35D4914]" : "bg-[#fff]"}`}
+            className={`rounded-lg mb-2 cursor-pointer transition-colors duration-300 ${ openIndex === index ? "bg-[#75bee23e]" : "bg-[#fff]"}`}
             >
             <div onClick={() => toggleFAQ(index)} className="flex py-5 px-4 sm:px-8 gap-6 sm:items-center text-black text-base sm:text-[18px] poppins-medium" style={{textAlign: 'left', alignItems: 'flex-start'}}>
                 <span
@@ -115,9 +117,9 @@ const [openIndex, setOpenIndex] = useState(null);
                 }`}
                 >
                 {openIndex === index ? <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M7 11H15M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11Z" stroke="#E35D49" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7 11H15M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11Z" stroke="#0982be" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
- : <ChevronDown className='w-5 h-5' />}
+ : <img src={plus} />}
                 </span>
                 <span className='w-[92%] sm:w-fit'>{faq.question}</span>
             </div>
@@ -135,21 +137,7 @@ const [openIndex, setOpenIndex] = useState(null);
         ))}
         </MOTION.div>
       </AnimatePresence>
-      <MOTION.h2 
-        initial={{ opacity: 0, y: 60 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-        viewport={{ once: true }}
-      className='poppins-medium text-[#101828] text-lg mt-6 text-center'>Still have questions?</MOTION.h2>
-        <MOTION.div
-          initial={{ opacity: 0, y: 60 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-        viewport={{ once: true }}
-        className='flex justify-center items-center gap-6 mt-[24px] mb-[44px]'>
-          <button onClick={() => setShowForm(true)} className='poppins-medium cursor-pointer text-[#E35D49] text-sm sm:text-base rounded-[8px] px-5 py-[9px] border border-[#E35D49]'>Contact Us</button>
-          <button onClick={() => setShowForm(true)} className='poppins-medium cursor-pointer text-white bg-[#E35D49] text-sm sm:text-base rounded-[8px] px-5 py-[10px]'>Join the Waitlist</button>
-        </MOTION.div>
+     
     </section>
   )
 }

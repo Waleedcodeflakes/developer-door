@@ -2,10 +2,10 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 const titles = {
-  "/": "Home Page | Developer Door Stylist",
-  "/features": "Features | Developer Door Stylist",
-  "/faqs": "FAQs | Developer Door Stylist",
-  "/privacy-policy": "Privacy Policy | Developer Door Stylist",
+  "/": "Home Page | Developer Door ",
+  "/features": "Features | Developer Door ",
+  "/faqs": "FAQs | Developer Door ",
+  "/privacy-policy": "Privacy Policy | Developer Door ",
 };
 
 export function TitleUpdater() {

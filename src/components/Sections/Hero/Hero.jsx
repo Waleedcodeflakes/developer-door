@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { motion as MOTION } from "framer-motion";
-import { ChevronRight, Code } from "lucide-react";
+import { ChevronRight, Code, Search } from "lucide-react";
 
 const Hero = ({setShowForm}) => {
 
@@ -21,24 +21,24 @@ const Hero = ({setShowForm}) => {
 </div>
 <div className="w-full max-w-lg">
 <div className="relative group">
-<div className="absolute -inset-0.5 bg-gradient-to-r from-primary/50 to-purple-600/50 rounded-lg blur opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-200"></div>
+{/* <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/50 to-purple-600/50 rounded-lg blur opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-200"></div> */}
 <div className="relative flex w-full items-center rounded-lg bg-surface-dark border border-surface-border p-1.5 focus-within:border-primary/50 transition-colors">
 <div className="flex h-10 w-10 items-center justify-center text-gray-400">
-<span className="material-symbols-outlined">search</span>
+<span className="material-symbols-outlined"><Search className="w-5 h-5" /></span>
 </div>
-<input className="h-full w-full border-none bg-transparent px-2 text-base text-[#fff] placeholder-gray-500 focus:ring-0 focus:outline-none" placeholder="Search by skill or company name..." type="text" />
+<input className="h-full w-full border-none bg-transparent px-2 text-base text-[#333] placeholder-gray-500 focus:ring-0 focus:outline-none" placeholder="Search by skill or company name..." type="text" />
 <button className="rounded-md bg-primary px-4 py-2 text-sm font-bold text-[#fff] hover:bg-primary-dark">
-                                    Search
-                                </button>
+    Search
+</button>
 </div>
 </div>
 </div>
 <div className="flex flex-wrap gap-2 text-sm">
 <span className="text-gray-500 py-1">Popular:</span>
-<a className="rounded-full bg-surface-dark border border-surface-border px-3 py-1 text-gray-300 hover:border-primary hover:text-[#333] transition-colors" href="#">React</a>
-<a className="rounded-full bg-surface-dark border border-surface-border px-3 py-1 text-gray-300 hover:border-primary hover:text-[#333] transition-colors" href="#">Python</a>
-<a className="rounded-full bg-surface-dark border border-surface-border px-3 py-1 text-gray-300 hover:border-primary hover:text-[#333] transition-colors" href="#">Mobile App</a>
-<a className="rounded-full bg-surface-dark border border-surface-border px-3 py-1 text-gray-300 hover:border-primary hover:text-[#333] transition-colors" href="#">Blockchain</a>
+<a className="rounded-full bg-surface-dark border border-surface-border px-3 py-1 border-primary text-[#333] transition-colors" href="#">React</a>
+<a className="rounded-full bg-surface-dark border border-surface-border px-3 py-1 border-primary text-[#333] transition-colors" href="#">Python</a>
+<a className="rounded-full bg-surface-dark border border-surface-border px-3 py-1 border-primary text-[#333] transition-colors" href="#">Mobile App</a>
+<a className="rounded-full bg-surface-dark border border-surface-border px-3 py-1 border-primary text-[#333] transition-colors" href="#">Blockchain</a>
 </div>
 <div className="flex flex-wrap gap-4 pt-4">
 <button className="flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-base font-bold text-[#fff] shadow-glow hover:bg-primary-dark transition-all">
