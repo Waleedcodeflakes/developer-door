@@ -1,7 +1,8 @@
 import React, {useMemo, useState} from 'react'
 import Navbar from '../../Sections/Navbar/Navbar'
 import Footer from '../../Sections/Footer/Footer'
-
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 const Team = () => {
     const members = [
     {
@@ -66,6 +67,25 @@ const Team = () => {
       ? members
       : members.filter((member) => member.role === activeFilter);
 
+      const { ref, inView } = useInView({
+        triggerOnce: true, // animate only first time (optional)
+        threshold: 0.2,    // 20% of the section visible = trigger
+    });
+
+    const container = {
+        hidden: {},
+        visible: {
+            transition: {
+            staggerChildren: 0.3, // gap between cards
+            },
+        },
+    };
+
+    const item = {
+        hidden: { y: 50, opacity: 0 },
+        visible: { y: 0, opacity: 1 },
+    };
+
   return (
     <>
     <Navbar/>
@@ -97,9 +117,17 @@ const Team = () => {
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-8">
+      <motion.div
+        ref={ref}
+        variants={container}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+      className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-8">
         {filteredMembers.map((member) => (
-          <div
+          <motion.div
+           ref={ref}
+            variants={item}
+            transition={{ duration: 0.4, ease: "easeOut" }}
             key={member.id}
             className="bg-white rounded-2xl p-0 shadow-sm hover:shadow-lg transition duration-300 text-center"
           >
@@ -135,9 +163,9 @@ const Team = () => {
             <button className="mt-5 w-full bg-gray-100 text-gray-700 py-2 rounded-lg hover:bg-gray-200 transition">
               View Profile
             </button>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
         </div>
     </section>
