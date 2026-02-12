@@ -48,7 +48,7 @@ const Navbar = ({showForm, setShowForm}) => {
                                 <li className='inline-block font-medium text-sm lg:text-[16px]  py-0 cursor-pointer'> <NavLink  to="/features" className={({ isActive }) =>`${isActive ? 'text-[#fff] border-b-[3px] border-[#fff] font-medium' : 'text-[#fff] '}`}>Features</NavLink></li>
                                 {/* <li className='inline-block  text-sm lg:text-[16px]  py-0 cursor-pointer'> <NavLink  to="/privacy-policy" className={({ isActive }) =>`${isActive ? 'text-[#fff] border-b-[3px] border-[#fff] font-medium' : 'text-[#fff] '}`}>Privacy Policy</NavLink></li> */}
                                 <li className='inline-block  text-sm lg:text-[16px]  py-0 cursor-pointer'> <NavLink  to="/faqs" className={({ isActive }) =>`${isActive ? 'text-[#fff] border-b-[3px] border-[#fff] font-medium' : 'text-[#fff] '}`}>FAQs</NavLink></li>
-                               <button onClick={() => {setNavLinks(false) ;setShowForm(true)}} className='inline-block text-[#0982be] font-medium text-sm lg:text[17px] text-center cursor-pointer bg-[#fff] py-[10px] rounded-[8px]'><p>Join Waitlist</p></button>
+                               <button onClick={() => {setNavLinks(false) ;setShowForm(true)}} className='inline-block text-[#0982be] font-medium text-sm lg:text[17px] text-center cursor-pointer bg-[#fff] py-[10px] rounded-[8px]'><p>Find Agencies</p></button>
                             </ul>
                         </nav>
                     </div>
