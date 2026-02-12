@@ -28,7 +28,7 @@ const Navbar = ({showForm, setShowForm}) => {
                     </ul>
                 </nav>
                 <div className='hidden md:flex items-center ml-4'>
-                    <button onClick={() => setShowForm(true)} className='inline-block text-[#fff] font-medium text-sm lg:text[17px] mx-4 cursor-pointer bg-[#0982be] py-[10px] px-5 rounded-[8px]'><p>Join Waitlist</p></button>
+                    <button onClick={() => setShowForm(false)} className='inline-block text-[#fff] font-medium text-sm lg:text[17px] mx-4 cursor-pointer bg-[#0982be] py-[10px] px-5 rounded-[8px]'><p>Find Agencies</p></button>
                 </div>
                 <div className='block md:hidden'>
                     <Menu onClick={() => {setNavLinks(true)}} className='w-6 h-6' />

@@ -135,7 +135,7 @@ const AdvanceFeatures = ({setShowForm}) => {
         className="flex justify-center"
       >
         <p className="poppins-medium text-center text-[#333333CC] text-[16px] sm:text-[18px] mt-6 w-[70%]">
-          These powerful features are coming soon to make FitMe the ultimate fashion companion.
+          These powerful features are coming soon to make Developer Door the ultimate fashion companion.
         </p>
       </motion.div>
       <div className="flex justify-center">

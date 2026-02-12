@@ -9,14 +9,14 @@ const Faqs = ({my, setShowForm}) => {
 
    const faqs = [
   {
-    question: "How does FitMe Stylist recommend outfits?",
+    question: "How does Developer Door Stylist recommend outfits?",
     answer:
-      "FitMe Stylist uses AI to suggest outfits based on your wardrobe, personal style, body type, occasion, current fashion trends, and even the local temperature and weather."
+      "Developer Door Stylist uses AI to suggest outfits based on your wardrobe, personal style, body type, occasion, current fashion trends, and even the local temperature and weather."
   },
   {
     question: "Can I try the app for free?",
     answer:
-      "Yes! You can use FitMe Stylist for free by filling out a simple form to get early access. Free users can upload clothes, get AI outfit recommendations, and explore wardrobe planning features."
+      "Yes! You can use Developer Door Stylist for free by filling out a simple form to get early access. Free users can upload clothes, get AI outfit recommendations, and explore wardrobe planning features."
   },
   {
     question: "What kind of analytics does the app provide?",
@@ -29,7 +29,7 @@ const Faqs = ({my, setShowForm}) => {
       "Upload photos directly from your phone or take snaps inside the app. You can categorizes your items for easy outfit planning."
   },
   {
-    question: "Does FitMe Stylist plan outfits for different occasions?",
+    question: "Does Developer Door Stylist plan outfits for different occasions?",
     answer:
       "Yes! The AI creates daily looks, special-event outfits, and weekly plans tailored to your style, mood, and weather."
   },
@@ -41,7 +41,7 @@ const Faqs = ({my, setShowForm}) => {
   {
     question: "Will it work for all body types and sizes?",
     answer:
-      "Yes! FitMe Stylist provides personalized outfit suggestions for every body type, shape, and style preference."
+      "Yes! Developer Door Stylist provides personalized outfit suggestions for every body type, shape, and style preference."
   },
   {
     question: "What about the virtual try-on feature?",

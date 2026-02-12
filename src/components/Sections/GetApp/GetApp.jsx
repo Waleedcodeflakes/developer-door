@@ -36,7 +36,7 @@ const GetApp = ({setShowForm}) => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.8 }}
                   viewport={{ once: true }}
-                className='inline-block text-[#fff] border border-[#fff] poppins-medium text-sm lg:text[17px] cursor-pointer bg-[#E35D49] py-[10px] px-5 rounded-[8px]'><p>Try FitMe Stylist Free</p></motion.button>
+                className='inline-block text-[#fff] border border-[#fff] poppins-medium text-sm lg:text[17px] cursor-pointer bg-[#E35D49] py-[10px] px-5 rounded-[8px]'><p>Try Developer Door Stylist Free</p></motion.button>
                 <motion.button 
                 onClick={() => setShowForm(true)}
                   initial={{ opacity: 0, x: 180 }}

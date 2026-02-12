@@ -157,7 +157,7 @@ const Style = ({setShowForm}) => {
           viewport={{ once: true }}
         className="cursor-pointer bg-[#E35D49] flex items-center justify-center py-3 gap-3 rounded-[8px] w-full">
           <p className="poppins-medium text-[#fff] text-[18px] sm:text-[20px]">
-            Try FitMe Stylist
+            Try Developer Door Stylist
           </p>
           {/* <img src={download} alt="icon" /> */}
         </motion.button>
