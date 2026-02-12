@@ -101,13 +101,13 @@ const Team = () => {
         {filteredMembers.map((member) => (
           <div
             key={member.id}
-            className="bg-white rounded-2xl p-2 shadow-sm hover:shadow-lg transition duration-300 text-center"
+            className="bg-white rounded-2xl p-0 shadow-sm hover:shadow-lg transition duration-300 text-center"
           >
             <div className="flex justify-center mb-4">
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-full h-40 rounded-xl object-cover"
+                className="w-full h-40  object-cover"
               />
             </div>
 

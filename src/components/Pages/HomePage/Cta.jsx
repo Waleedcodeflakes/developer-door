@@ -1,12 +1,17 @@
 import { ArrowRight } from 'lucide-react'
 import React from 'react'
-
+import { motion } from 'framer-motion'
 const Cta = () => {
   return (
     <section className="cta-gradient py-20 lg:py-24 overflow-hidden relative border-t border-[#283339]">
 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
 <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-<div className="max-w-2xl text-center lg:text-left">
+<motion.div
+ initial={{ opacity: 0, x: -50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
+  viewport={{ once: true }}
+className="max-w-2xl text-center lg:text-left">
 <h2 className="text-4xl lg:text-5xl font-black text-white leading-tight mb-4">
                     Ready to build <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-white">something amazing?</span>
 </h2>
@@ -21,9 +26,14 @@ const Cta = () => {
                         Talk to Sales
                     </button>
 </div>
-</div>
+</motion.div>
 <div className="relative lg:w-1/2 flex justify-center lg:justify-end">
-<div className="relative w-64 h-64 lg:w-80 lg:h-80">
+<motion.div
+initial={{ opacity: 0, x: -50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
+  viewport={{ once: true }}
+className="relative w-64 h-64 lg:w-80 lg:h-80">
 <div className="absolute inset-0 bg-gradient-to-tr from-blue-400/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
 <div className="relative w-full h-full rounded-full bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 shadow-2xl flex items-center justify-center overflow-hidden">
 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-500/10 to-blue-900/40"></div>
@@ -37,7 +47,7 @@ const Cta = () => {
 </div>
 <div className="absolute -inset-4 border border-white/5 rounded-full z-0"></div>
 <div className="absolute -inset-12 border border-white/5 rounded-full z-0"></div>
-</div>
+</motion.div>
 </div>
 </div>
 </div>

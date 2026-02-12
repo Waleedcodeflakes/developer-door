@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { motion as MOTION } from "framer-motion";
 import { ChevronRight, Code, Search } from "lucide-react";
-
+import { motion } from "framer-motion";
 const Hero = ({setShowForm}) => {
 
 
@@ -12,17 +12,32 @@ const Hero = ({setShowForm}) => {
 <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-8 items-center">
 <div className="flex flex-col gap-8">
 <div className="space-y-4">
-<h1 className="text-4xl font-bold leading-tight tracking-tight text-[#333] sm:text-5xl lg:text-6xl">
+<motion.h1
+ initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
+            viewport={{ once: true }}
+className="text-4xl font-bold leading-tight tracking-tight text-[#333] sm:text-5xl lg:text-6xl">
                         Door To <span className="text-primary">top-tier</span> Tech Teams.
-                        </h1>
-<p className="text-lg text-gray-400 max-w-xl leading-relaxed">
+                        </motion.h1>
+<motion.p
+ initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
+            viewport={{ once: true }}
+className="text-lg text-gray-400 max-w-xl leading-relaxed">
                             Post your project, get curated proposals from vetted development companies, and hire with confidence. Save time and reduce risk.
-                        </p>
+                        </motion.p>
 </div>
 <div className="w-full max-w-lg">
 <div className="relative group">
 {/* <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/50 to-purple-600/50 rounded-lg blur opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-200"></div> */}
-<div className="relative flex w-full items-center rounded-lg bg-surface-dark border border-surface-border p-1.5 focus-within:border-primary/50 transition-colors">
+<motion.div
+ initial={{ opacity: 0, y: 70 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
+            viewport={{ once: true }}
+className="relative flex w-full items-center rounded-lg bg-surface-dark border border-surface-border p-1.5 focus-within:border-primary/50 transition-colors">
 <div className="flex h-10 w-10 items-center justify-center text-gray-400">
 <span className="material-symbols-outlined"><Search className="w-5 h-5" /></span>
 </div>
@@ -30,17 +45,27 @@ const Hero = ({setShowForm}) => {
 <button className="rounded-md bg-primary px-4 py-2 text-sm font-bold text-[#fff] hover:bg-primary-dark">
     Search
 </button>
+</motion.div>
 </div>
 </div>
-</div>
-<div className="flex flex-wrap gap-2 text-sm">
+<motion.div
+ initial={{ opacity: 0, y: 70 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
+            viewport={{ once: true }}
+className="flex flex-wrap gap-2 text-sm">
 <span className="text-gray-500 py-1">Popular:</span>
 <a className="rounded-full bg-surface-dark border border-surface-border px-3 py-1 border-primary text-[#333] transition-colors" href="#">React</a>
 <a className="rounded-full bg-surface-dark border border-surface-border px-3 py-1 border-primary text-[#333] transition-colors" href="#">Python</a>
 <a className="rounded-full bg-surface-dark border border-surface-border px-3 py-1 border-primary text-[#333] transition-colors" href="#">Mobile App</a>
 <a className="rounded-full bg-surface-dark border border-surface-border px-3 py-1 border-primary text-[#333] transition-colors" href="#">Blockchain</a>
-</div>
-<div className="flex flex-wrap gap-4 pt-4">
+</motion.div>
+<motion.div
+ initial={{ opacity: 0, y: 80 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
+            viewport={{ once: true }}
+className="flex flex-wrap gap-4 pt-4">
 <button className="flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-base font-bold text-[#fff] shadow-glow hover:bg-primary-dark transition-all">
                             Find Agencies
                             <span className="material-symbols-outlined text-sm"><ChevronRight className="w-5 h-5" /></span>
@@ -48,9 +73,14 @@ const Hero = ({setShowForm}) => {
 <button className="flex items-center gap-2 rounded-lg border border-surface-border bg-transparent px-6 py-3 text-base font-bold text-[#333] hover:bg-surface-dark hover:border-gray-500 transition-all">
                             Browse Companies
                         </button>
+</motion.div>
 </div>
-</div>
-<div className="relative hidden lg:block h-[500px] w-full perspective-[1000px]">
+<motion.div
+ initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
+            viewport={{ once: true }}
+className="relative hidden lg:block h-[500px] w-full perspective-[1000px]">
 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-primary/10 rounded-full blur-3xl"></div>
 <div className="glass-card bg-[#192025] absolute top-10 right-10 w-80 rounded-xl p-5 transform rotate-6 scale-90 opacity-60 shadow-2xl transition-transform hover:rotate-3 hover:scale-95 duration-500">
 <div className="flex items-center gap-4 mb-4">
@@ -123,7 +153,7 @@ const Hero = ({setShowForm}) => {
                             View Profile
                         </button>
 </div>
-</div>
+</motion.div>
 </div>
 </div>
 </section>

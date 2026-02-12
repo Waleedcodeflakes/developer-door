@@ -45,7 +45,7 @@ const Experties = () => {
         },
     };
 
-    const item = {
+    const items = {
         hidden: { y: 50, opacity: 0 },
         visible: { y: 0, opacity: 1 },
     };
@@ -67,7 +67,7 @@ const Experties = () => {
         {categories.map((item, index) => (
           <motion.div 
            ref={ref}
-            variants={item}
+            variants={items}
             transition={{ duration: 0.4, ease: "easeOut" }}
             key={index} 
             className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
