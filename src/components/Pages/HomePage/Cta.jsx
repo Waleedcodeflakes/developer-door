@@ -29,7 +29,7 @@ className="max-w-2xl text-center lg:text-left">
 </motion.div>
 <div className="relative lg:w-1/2 flex justify-center lg:justify-end">
 <motion.div
-initial={{ opacity: 0, x: -50 }}
+initial={{ opacity: 0, x: 50 }}
   whileInView={{ opacity: 1, x: 0 }}
   transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
   viewport={{ once: true }}

@@ -44,7 +44,7 @@ const Team = () => {
       name: "David Smith",
       role: "Full Stack",
       experience: 7,
-      image: "https://randomuser.me/api/portraits/men/55.jpg",
+      image: "https://randomuser.me/api/portraits/men/40.jpg",
     },
   ];
 
