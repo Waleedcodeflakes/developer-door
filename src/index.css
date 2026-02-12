@@ -1,0 +1,32 @@
+/* inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+  margin: 0;
+}
+/* @import "tailwindcss"; */
+@import "tailwindcss";
+
+/* #3182ED12 fags bg */
+textarea {
+  resize: none;
+}
+html, body {
+  overflow-x: hidden;
+}
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+}
+
+.text-primary{
+    color: #0982be;
+}
+.bg-primary{
+    background-color: #0982be;
+}
+
+button{
+    cursor: pointer ;
+}
