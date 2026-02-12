@@ -9,49 +9,39 @@ const Faqs = ({my, setShowForm}) => {
 
    const faqs = [
   {
-    question: "How does Developer Door  recommend outfits?",
+    question: "How does Developer Door recommend by companies?",
     answer:
-      "Developer Door  uses AI to suggest outfits based on your wardrobe, personal style, body type, occasion, current fashion trends, and even the local temperature and weather."
-  },
-  {
-    question: "Can I try the app for free?",
-    answer:
-      "Yes! You can use Developer Door  for free by filling out a simple form to get early access. Free users can upload clothes, get AI outfit recommendations, and explore wardrobe planning features."
-  },
-  {
-    question: "What kind of analytics does the app provide?",
-    answer:
-      "The app tracks your wardrobe usage, showing most-worn items, unused pieces, and cost-per-wear, helping you make smarter style decisions."
+      "Tempora corrupti et ex, cumque rerum voluptatum veritatis molestiae iusto doloribus ut praesentium obcaecati dolor fugiat error adipisci veniam quam, aliquam nam?"
   },
   {
     question: "How do I upload my wardrobe?",
     answer:
-      "Upload photos directly from your phone or take snaps inside the app. You can categorizes your items for easy outfit planning."
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporalestiae iusto doloribus ut praesentium obcaecati dolor fugiat error adipisci veniam quam, aliquam nam?"
   },
   {
-    question: "Does Developer Door  plan outfits for different occasions?",
+    question: "Does Developer Door plan outfits for different occasions?",
     answer:
-      "Yes! The AI creates daily looks, special-event outfits, and weekly plans tailored to your style, mood, and weather."
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora corrupti et ex, cu?"
   },
   {
     question: "Is my data safe?",
     answer:
-      "Absolutely. All your wardrobe images and personal info are securely stored and handled with privacy in mind."
+      "Lorem, ipsum dolor sit ameibus ut praesentium obcaecati dolor fugiat error adipisci veniam quam, aliquam nam?"
   },
   {
     question: "Will it work for all body types and sizes?",
     answer:
-      "Yes! Developer Door  provides personalized outfit suggestions for every body type, shape, and style preference."
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora corrupti et ex, cumque rerum voluptatum veritatis molestiae iusto doloribus ut praesentium obcaecati dolor fugiat "
   },
   {
     question: "What about the virtual try-on feature?",
     answer:
-      "Coming soon! You’ll be able to see yourself in outfits virtually before wearing them, making styling even easier."
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora corrupti et ex, cumque rerum voluptatum veritatis molestiaer fugiat error adipisci veniam quam, aliquam nam?"
   },
   {
     question: "Can I connect brands or shops?",
     answer:
-      "Yes! Future updates will provide curated outfit suggestions from partner brands for inspiration and shopping."
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora corrupti et ex, cumque rerum voluptatum veritatis molestiae iusto doloribus ut praesentium obcaecati dolor fugiat error adipisci veniam quam, aliquam nam?"
   },
 ];
 
@@ -84,9 +74,7 @@ const [openIndex, setOpenIndex] = useState(null);
     <section className='w-[92%] m-auto my-20'>
       <div className='text-center'>
         <h3 className='text-3xl font-semibold tracking-tight text-[#333] sm:text-4xl'>Frequently asked questions</h3>
-        <p className='mt-4 text-lg text-gray-400'>Everything you need to know about hiring on Developer Door.
-
-</p>
+        <p className='mt-4 text-lg text-gray-400'>Everything you need to know about hiring on Developer Door.</p>
       </div>
       {/* faqs */}
       <AnimatePresence>
