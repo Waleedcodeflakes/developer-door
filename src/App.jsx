@@ -3,6 +3,7 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import HomePage from './components/Pages/HomePage/HomePage'
 import { TitleUpdater } from './components/Pages/TitleUpdater';
+import Team from './components/Pages/Team/Team';
 
 
 function ScrollToTop() {
@@ -26,6 +27,7 @@ function App() {
       <TitleUpdater/>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/team" element={<Team />} />
       </Routes>
       {/* <TitleUpdater/> */}
     </Router>

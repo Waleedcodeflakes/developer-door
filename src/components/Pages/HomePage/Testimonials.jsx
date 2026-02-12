@@ -1,6 +1,7 @@
 import { Star } from 'lucide-react'
 import React from 'react'
-
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 const Testimonials = () => {
     const reviews = [
         {
@@ -25,6 +26,25 @@ const Testimonials = () => {
             profile: "https://lh3.googleusercontent.com/aida-public/AB6AXuDLtAT0fAisKf9LVcw6Zvtf31LZDPYxcBpNlWcJKcCzvny9kMxLodgWZsvBo7D6ILIKRMbk6ZCZ1zSmybAf7J7MTYb-Wq9oBfsP2ee3dGf7ytLuyzuvCXpzaaHMt_Pbibp4a9KKUx6NZtbn6OpSOXk1CNnCJKWIdXNbiJx7jEIn42wct7oPijwt14CsQg2AGXaQr-JyIQKEhK2li85RCcXDY7WHUe-7N8pvFidq5DG_npdwKNdmAiOqsEcqHXUugNX4cr7VhHbPbA')"
         },
     ]
+
+    const { ref, inView } = useInView({
+        triggerOnce: true, // animate only first time (optional)
+        threshold: 0.2,    // 20% of the section visible = trigger
+    });
+
+    const container = {
+        hidden: {},
+        visible: {
+            transition: {
+            staggerChildren: 0.3, // gap between cards
+            },
+        },
+    };
+
+    const item = {
+        hidden: { y: 50, opacity: 0 },
+        visible: { y: 0, opacity: 1 },
+    };
   return (
     <section className="py-20 bg-[#fff]">
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -32,9 +52,19 @@ const Testimonials = () => {
     <h2 className="text-3xl font-bold tracking-tight text-[#333] sm:text-4xl">Client Success Stories</h2>
     <p className="mt-4 text-lg text-gray-400">See how businesses are scaling faster with vetted tech partners.</p>
     </div>
-    <div className='grid grid-cols-1 sm:grid-cols-3 gap-3'>
+    <motion.div 
+     ref={ref}
+    variants={container}
+    initial="hidden"
+    animate={inView ? "visible" : "hidden"}
+
+    className='grid grid-cols-1 sm:grid-cols-3 gap-3'>
     {reviews.map((r, idx) => (
-        <div key={idx} className="relative  p-8 rounded-2xl bg-[#1e2329] border border-[#2d343d] flex flex-col justify-between">
+        <motion.div
+         ref={ref}
+        variants={item}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+        key={idx} className="relative  p-8 rounded-2xl bg-[#1e2329] border border-[#2d343d] flex flex-col justify-between">
         <span className="material-symbols-outlined absolute top-6 left-6 text-4xl text-primary/20"></span>
         <div className="relative z-10">
         <div className="flex gap-1 text-yellow-500 mb-6">
@@ -56,10 +86,10 @@ const Testimonials = () => {
         <div className="text-xs text-primary">{r.designation}</div>
         </div>
         </div>
-        </div>
+        </motion.div>
     ))}
 
-    </div>
+    </motion.div>
     </div>
     </section>
   )

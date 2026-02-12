@@ -22,13 +22,13 @@ const Navbar = ({showForm, setShowForm}) => {
                 <nav className='md:block'>
                         <ul className='hidden md:flex gap-12 text-[#0F1C2C] font-medium text-sm lg:text-[16px]'>
                         <li className='inline-block font-medium text-sm lg:text-[16px]  py-0 cursor-pointer'><NavLink to="/" className={({ isActive }) =>`${isActive ? 'text-[#0982be] border-b-[3px] border-[#0982be] font-medium' : 'text-[#0F1C2C] '}`}>Home</NavLink></li>
-                        <li className='inline-block font-medium text-sm lg:text-[16px]  py-0 cursor-pointer'> <NavLink  to="/features" className={({ isActive }) =>`${isActive ? 'text-[#0982be] border-b-[3px] border-[#0982be] font-medium' : 'text-[#0F1C2C] '}`}>Features</NavLink></li>
+                        <li className='inline-block font-medium text-sm lg:text-[16px]  py-0 cursor-pointer'> <NavLink  to="/team" className={({ isActive }) =>`${isActive ? 'text-[#0982be] border-b-[3px] border-[#0982be] font-medium' : 'text-[#0F1C2C] '}`}>Development Team</NavLink></li>
                         {/* <li className='inline-block  text-sm lg:text-[16px]  py-0 cursor-pointer'> <NavLink  to="/privacy-policy" className={({ isActive }) =>`${isActive ? 'text-[#0982be] border-b-[3px] border-[#0982be] font-medium' : 'text-[#0F1C2C] '}`}>Privacy Policy</NavLink></li> */}
                         <li className='inline-block  text-sm lg:text-[16px]  py-0 cursor-pointer'> <NavLink  to="/faqs" className={({ isActive }) =>`${isActive ? 'text-[#0982be] border-b-[3px] border-[#0982be] font-medium' : 'text-[#0F1C2C] '}`}>FAQs</NavLink></li>
                     </ul>
                 </nav>
                 <div className='hidden md:flex items-center ml-4'>
-                    <button onClick={() => setShowForm(false)} className='inline-block text-[#fff] font-medium text-sm lg:text[17px] mx-4 cursor-pointer bg-[#0982be] py-[10px] px-5 rounded-[8px]'><p>Find Agencies</p></button>
+                    <button onClick={() => navigate('/team')} className='inline-block text-[#fff] font-medium text-sm lg:text[17px] mx-4 cursor-pointer bg-[#0982be] py-[10px] px-5 rounded-[8px]'><p>Find Agencies</p></button>
                 </div>
                 <div className='block md:hidden'>
                     <Menu onClick={() => {setNavLinks(true)}} className='w-6 h-6' />

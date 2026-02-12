@@ -1,6 +1,7 @@
 import React from 'react'
 import { ArrowUpRight } from 'lucide-react';
-
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 const Experties = () => {
 
     const categories = [
@@ -29,17 +30,45 @@ const Experties = () => {
         url: "#"
     }
 ];
+
+  const { ref, inView } = useInView({
+        triggerOnce: true, // animate only first time (optional)
+        threshold: 0.2,    // 20% of the section visible = trigger
+    });
+
+    const container = {
+        hidden: {},
+        visible: {
+            transition: {
+            staggerChildren: 0.3, // gap between cards
+            },
+        },
+    };
+
+    const item = {
+        hidden: { y: 50, opacity: 0 },
+        visible: { y: 0, opacity: 1 },
+    };
+
   return (
-     <section class="py-20 bg-[#fff]">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-16">
-    <h2 class="text-3xl font-bold tracking-tight text-[#333] sm:text-4xl">What are you <span className='text-primary'>looking for?</span></h2>
-    <p class="mt-4 text-lg text-gray-400">Select a category to explore our specialized services and find the perfect solution for your digital needs</p>
+     <section className="py-20 bg-[#fff]">
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="text-center max-w-2xl mx-auto mb-16">
+    <h2 className="text-3xl font-bold tracking-tight text-[#333] sm:text-4xl">What are you <span className='text-primary'>looking for?</span></h2>
+    <p className="mt-4 text-lg text-gray-400">Select a category to explore our specialized services and find the perfect solution for your digital needs</p>
     </div>
     <div className="">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <motion.div 
+       ref={ref}
+    variants={container}
+    initial="hidden"
+    animate={inView ? "visible" : "hidden"}
+      className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
         {categories.map((item, index) => (
-          <div 
+          <motion.div 
+           ref={ref}
+            variants={item}
+            transition={{ duration: 0.4, ease: "easeOut" }}
             key={index} 
             className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow relative group cursor-pointer"
           >
@@ -67,9 +96,9 @@ const Experties = () => {
             <a href={item.url} className="absolute inset-0">
               <span className="sr-only">View {item.title}</span>
             </a>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
     </div>
     </section>
