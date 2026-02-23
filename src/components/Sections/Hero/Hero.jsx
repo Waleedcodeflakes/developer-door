@@ -1,9 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
 import { motion as MOTION } from "framer-motion";
-import { ChevronRight, Code, Search } from "lucide-react";
+import { ChevronRight, Code, Search, SearchIcon } from "lucide-react";
 import herobg from '../../../assets/images/hero-banner2.jpg'
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import Clients from "../../Pages/HomePage/Clients";
 const Hero = () => {
 
     const [displayText, setDisplayText] = useState("");
@@ -65,25 +66,31 @@ const Hero = () => {
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: -50, opacity: 0 }}
       transition={{ duration: 1, ease: "easeInOut" }}
-        className='font-medium h-[110px] sm:h-[90px] text-[#b5b5b5] mt-4 text-basse sm:text-lg w-full sm:w-[59%]'>{paragraphText}</motion.p>
+        className='font-medium h-[110px] sm:h-[90px] text-[#b5b5b5] mt-4 text-basse sm:text-lg w-full sm:w-[59%]'>{paragraphText}</motion.p
+        >
+        <div className="bg-[#FFFFFF14] w-[40%] px-4.5 py-3 border-[#FFFFFF4D] border-b backdrop-blur-[44px]">
+            <div className="flex items-center gap-3">
+                <SearchIcon className="text-white" />
+                <input type="text" placeholder="Search by skill or company name..." className="placeholder:text-white w-full text-white border-none outline-none" />
+            </div>
+        </div>
         <motion.div
          initial={{ y: 80, opacity: 0 }} 
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: -50, opacity: 0 }}
       transition={{ duration: 1, ease: "easeInOut" }}
         className='flex items-center gap-4 mt-6'>
-            <button onClick={() => navigate('/courses')} className='text-white font-semibold px-4 py-2.5 rounded-lg bg-linear-to-r from-[#31BBD0] to-[#6ec7a7] transition-colors duration-300'>Browse Companies</button>
+            <button onClick={() => navigate('/team')} className='text-[#00BD5F] font-semibold px-4 py-2.5 rounded-lg bg-[#00AB391A] border border-[#00BD5F] transition-colors duration-300 flex items-center gap-3.5'>Browse Companies <span className="bg-[#00BD5F20] rounded-full w-5 h-5 flex items-center justify-center"><ChevronRight /></span></button>
             <button onClick={() => {
               const reg = document.getElementById('register')
               reg?.scrollIntoView({ behavior: 'smooth' })
             }}
-            className="relative px-4 py-2.5 rounded-lg font-semibold bg-black transition-colors duration-300">
-                <span className="relative z-10 bg-gradient-to-r from-[#A3D183] to-[#31BBCF] bg-clip-text text-transparent">
+            className="relative px-4 py-2.5 rounded-lg font-semibold bg-[#00BD5F] transition-colors duration-300">
+                <span className="relative z-10 text-white flex items-center justify-center gap-3">
                     Find Agencies
+                     <span className="bg-[#FFFFFF50] rounded-full w-5 h-5 flex items-center justify-center"><ChevronRight /></span>
                 </span>
-                <span className="absolute inset-0 rounded-lg p-[1px] bg-gradient-to-r from-[#A3D183] to-[#31BBCF]">
-                    <span className="block w-full h-full rounded-lg bg-black"></span>
-                </span>
+               
             </button>
         </motion.div>
         </div>
@@ -93,6 +100,7 @@ const Hero = () => {
 
     </div>
     </section>
+    <Clients/>
     </>
   )
 }

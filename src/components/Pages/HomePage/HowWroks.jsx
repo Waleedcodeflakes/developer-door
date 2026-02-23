@@ -58,10 +58,10 @@ const HowWroks = () => {
              ref={ref}
             variants={item}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            className="group relative rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow p-8 hover:border-primary/50 transition-colors duration-300">
-            <div className="absolute top-6 right-6 text-6xl font-semibold text-black/15 ">0{idx+1}</div>
+            className="group relative rounded-2xl text-center p-8 hover:border-primary/50 duration-300">
+            {/* <div className="absolute top-6 right-6 text-6xl font-semibold text-black/15 ">0{idx+1}</div> */}
             <div className="mb-6 inline-flex size-14 items-center justify-center rounded-xl bg-blue-100 text-primary">
-            <span className="material-symbols-outlined text-3xl">{st.icon}</span>
+            <span className="material-symbols-outlined text-3xl">0{idx+1}</span>
             </div>
             <h3 className="text-xl font-bold text-[#333] mb-3">{st.title}</h3>
             <p className="text-gray-400 leading-relaxed">{st.desc}</p>

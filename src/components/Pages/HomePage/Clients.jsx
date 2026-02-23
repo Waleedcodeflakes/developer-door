@@ -4,7 +4,7 @@ import React from 'react'
 
 const Clients = () => {
   return (
-    <section className="border-y border-[#283339] bg-[#14181B]">
+    <section className="border-y border-[#283339] bg-[#121212]">
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
     <div className="flex flex-col lg:flex-row gap-8 items-center justify-between">
     <div className="flex flex-wrap justify-center gap-8 opacity-60 transition-all text-white duration-500">
@@ -26,7 +26,7 @@ const Clients = () => {
     <span className="font-semibold text-xl text-white tracking-tighter">SPARK</span>
     </div>
     </div>
-    <div className="flex gap-8 sm:gap-12">
+    <div className="flex gap-8 sm:gap-12 bg-black">
     <div className="flex flex-col">
     <span className="text-2xl font-bold text-white">500+</span>
     <span className="text-sm font-medium text-gray-400">Projects Posted</span>
