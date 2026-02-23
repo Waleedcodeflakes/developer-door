@@ -17,18 +17,18 @@ const Navbar = ({showForm, setShowForm}) => {
         )}
             <div className='w-[92%] m-auto gap-10 flex justify-between items-center py-2 md:py-3'>
                 <div className='cursor-pointer w-full sm:w-[18%]'>
-                    <h1 onClick={() => navigate('/')} className='font-bold text-[#0982be] text-[28px] sm:text-[22px]'>Developer Door</h1>
+                    <h1 onClick={() => navigate('/')} className='font-bold text-[#00BD5F] text-[28px] sm:text-[22px]'>Developer Door</h1>
                 </div>
                 <nav className='md:block'>
                         <ul className='hidden md:flex gap-12 text-[#0F1C2C] font-medium text-sm lg:text-[16px]'>
-                        <li className='inline-block font-medium text-sm lg:text-[16px]  py-0 cursor-pointer'><NavLink to="/" className={({ isActive }) =>`${isActive ? 'text-[#0982be] border-b-[3px] border-[#0982be] font-medium' : 'text-[#0F1C2C] '}`}>Home</NavLink></li>
-                        <li className='inline-block font-medium text-sm lg:text-[16px]  py-0 cursor-pointer'> <NavLink  to="/team" className={({ isActive }) =>`${isActive ? 'text-[#0982be] border-b-[3px] border-[#0982be] font-medium' : 'text-[#0F1C2C] '}`}>Development Team</NavLink></li>
-                        {/* <li className='inline-block  text-sm lg:text-[16px]  py-0 cursor-pointer'> <NavLink  to="/privacy-policy" className={({ isActive }) =>`${isActive ? 'text-[#0982be] border-b-[3px] border-[#0982be] font-medium' : 'text-[#0F1C2C] '}`}>Privacy Policy</NavLink></li> */}
-                        <li className='inline-block  text-sm lg:text-[16px]  py-0 cursor-pointer'> <NavLink  to="/faqs" className={({ isActive }) =>`${isActive ? 'text-[#0982be] border-b-[3px] border-[#0982be] font-medium' : 'text-[#0F1C2C] '}`}>FAQs</NavLink></li>
+                        <li className='inline-block font-medium text-sm lg:text-[16px]  py-0 cursor-pointer'><NavLink to="/" className={({ isActive }) =>`${isActive ? 'text-[#00BD5F] border-b-[3px] border-[#00BD5F] font-medium' : 'text-[#0F1C2C] '}`}>Home</NavLink></li>
+                        <li className='inline-block font-medium text-sm lg:text-[16px]  py-0 cursor-pointer'> <NavLink  to="/team" className={({ isActive }) =>`${isActive ? 'text-[#00BD5F] border-b-[3px] border-[#00BD5F] font-medium' : 'text-[#0F1C2C] '}`}>Development Team</NavLink></li>
+                        {/* <li className='inline-block  text-sm lg:text-[16px]  py-0 cursor-pointer'> <NavLink  to="/privacy-policy" className={({ isActive }) =>`${isActive ? 'text-[#00BD5F] border-b-[3px] border-[#00BD5F] font-medium' : 'text-[#0F1C2C] '}`}>Privacy Policy</NavLink></li> */}
+                        <li className='inline-block  text-sm lg:text-[16px]  py-0 cursor-pointer'> <NavLink  to="/faqs" className={({ isActive }) =>`${isActive ? 'text-[#00BD5F] border-b-[3px] border-[#00BD5F] font-medium' : 'text-[#0F1C2C] '}`}>FAQs</NavLink></li>
                     </ul>
                 </nav>
                 <div className='hidden md:flex items-center ml-4'>
-                    <button onClick={() => navigate('/team')} className='inline-block text-[#fff] font-medium text-sm lg:text[17px] mx-4 cursor-pointer bg-[#0982be] py-[10px] px-5 rounded-[8px]'><p>Find Agencies</p></button>
+                    <button onClick={() => navigate('/team')} className='inline-block text-[#fff] font-medium text-sm lg:text[17px] mx-4 cursor-pointer bg-[#00BD5F] py-[10px] px-5 rounded-[8px]'><p>Find Agencies</p></button>
                 </div>
                 <div className='block md:hidden'>
                     <Menu onClick={() => {setNavLinks(true)}} className='w-6 h-6' />
@@ -36,7 +36,7 @@ const Navbar = ({showForm, setShowForm}) => {
                 {/* navbar responsive */}
                 {navLinks && (
                 <div className='w-full h-screen bg-[#00000080] fixed top-0 left-0 z-50'>
-                    <div className='w-[70%] h-full bg-[#0982be] p-6 relative rounded-r-2xl'>
+                    <div className='w-[70%] h-full bg-[#00BD5F] p-6 relative rounded-r-2xl'>
                         <div className='flex justify-between'>
                             <h1 onClick={() => {navigate('/'); setNavLinks(false)}} className='font-bold text-[#fff] text-[24px] sm:text-[38px] sm:text-[36px]'>Developer Door</h1>
                             <button onClick={() => setNavLinks(false)} className='text-[#fff] font-medium text-sm lg:text-xl cursor-pointer rounded-[8px]'>
@@ -48,7 +48,7 @@ const Navbar = ({showForm, setShowForm}) => {
                                 <li className='inline-block font-medium text-sm lg:text-[16px]  py-0 cursor-pointer'> <NavLink  to="/features" className={({ isActive }) =>`${isActive ? 'text-[#fff] border-b-[3px] border-[#fff] font-medium' : 'text-[#fff] '}`}>Features</NavLink></li>
                                 {/* <li className='inline-block  text-sm lg:text-[16px]  py-0 cursor-pointer'> <NavLink  to="/privacy-policy" className={({ isActive }) =>`${isActive ? 'text-[#fff] border-b-[3px] border-[#fff] font-medium' : 'text-[#fff] '}`}>Privacy Policy</NavLink></li> */}
                                 <li className='inline-block  text-sm lg:text-[16px]  py-0 cursor-pointer'> <NavLink  to="/faqs" className={({ isActive }) =>`${isActive ? 'text-[#fff] border-b-[3px] border-[#fff] font-medium' : 'text-[#fff] '}`}>FAQs</NavLink></li>
-                               <button onClick={() => {setNavLinks(false) ;setShowForm(true)}} className='inline-block text-[#0982be] font-medium text-sm lg:text[17px] text-center cursor-pointer bg-[#fff] py-[10px] rounded-[8px]'><p>Find Agencies</p></button>
+                               <button onClick={() => {setNavLinks(false) ;setShowForm(true)}} className='inline-block text-[#00BD5F] font-medium text-sm lg:text[17px] text-center cursor-pointer bg-[#fff] py-[10px] rounded-[8px]'><p>Find Agencies</p></button>
                             </ul>
                         </nav>
                     </div>

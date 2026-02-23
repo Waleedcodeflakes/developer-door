@@ -1,5 +1,5 @@
 /* inter */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 body {
   margin: 0;
@@ -11,7 +11,8 @@ body {
 textarea {
   resize: none;
 }
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -20,15 +21,15 @@ html, body {
   font-style: normal;
 }
 
-.text-primary{
-    color: #0982be;
+.text-primary {
+  color: #00bd5f;
 }
-.bg-primary{
-    background-color: #0982be;
+.bg-primary {
+  background-color: #00bd5f;
 }
-.cta-gradient{
-      background: linear-gradient(135deg, #0F1113 0%, #094b6e 100%);
+.cta-gradient {
+  background: linear-gradient(135deg, #0f1113 0%, #094b6e 100%);
 }
-button{
-    cursor: pointer ;
+button {
+  cursor: pointer;
 }

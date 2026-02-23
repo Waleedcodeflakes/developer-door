@@ -105,7 +105,7 @@ const Team = () => {
             className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300
               ${
                 activeFilter === filter
-                  ? "bg-[#0982be] text-white shadow-md"
+                  ? "bg-[#00BD5F] text-white shadow-md"
                   : "bg-gray-200 text-gray-600 hover:bg-gray-300"
               }`}
           >

@@ -11,7 +11,7 @@ const HowWroks = () => {
             desc: "Describe your project requirements, budget, and timeline. Our smart system helps you define what you need."
         },
         {
-            icon: <MessageSquare fill='#0982be'/>,
+            icon: <MessageSquare fill='#00BD5F'/>,
             title: "Receive Proposals",
             desc: "Get detailed proposals from pre-vetted agencies within hours. Compare portfolios, reviews, and quotes easily."
         },

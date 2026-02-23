@@ -16,7 +16,7 @@ const HomePage = () => {
         <Navbar setShowForm={setShowForm} showForm={showForm} />
         <div className='mt-10'>
           <Hero />
-          <Clients/>
+          {/* <Clients/> */}
           <HowWroks/>
           <Experties/>
           <Testimonials/>
