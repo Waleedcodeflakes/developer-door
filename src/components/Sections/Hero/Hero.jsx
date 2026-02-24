@@ -12,7 +12,7 @@ const Hero = () => {
       
       const navigate = useNavigate();
 
-      const text = 'Connect with Top-Rated\n Tech Agencies Worldwide' ;
+      const text = `Connect with <span class="text-[#00BD5F]">Top-Rated\n Tech Agencies</span> Worldwide`;
       
       useEffect(() => {
         if (index < text.length) {
@@ -56,11 +56,7 @@ const Hero = () => {
         {/* headings */}
         <div className='ps-4 sm:ps-26 relative w-[80%] z-10 mt-3 sm:-mt-7'>
         
-         <h1 className="text-white h-[60px] sm:h-[100px] text-3xl sm:text-3xl md:text-3xl lg:text-[48px] font-semibold whitespace-pre-line">
-        
-         {displayText}
-        
-    </h1>
+         <h1 className="text-white h-[60px] sm:h-[100px] text-3xl sm:text-3xl md:text-3xl lg:text-[48px] font-semibold whitespace-pre-line" dangerouslySetInnerHTML={{__html: displayText}}></h1>
         <motion.p
           initial={{ y: 80, opacity: 0 }} 
       animate={{ y: 0, opacity: 1 }}
@@ -79,7 +75,7 @@ const Hero = () => {
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: -50, opacity: 0 }}
       transition={{ duration: 1, ease: "easeInOut" }}
-        className='flex items-center gap-4 mt-6'>
+        className='flex items-center gap-4 mt-8'>
             <button onClick={() => navigate('/team')} className='text-[#00BD5F] font-semibold px-4 py-2.5 rounded-lg bg-[#00AB391A] border border-[#00BD5F] transition-colors duration-300 flex items-center gap-3.5'>Browse Companies <span className="bg-[#00BD5F20] rounded-full w-5 h-5 flex items-center justify-center"><ChevronRight /></span></button>
             <button onClick={() => {
               const reg = document.getElementById('register')
@@ -100,7 +96,6 @@ const Hero = () => {
 
     </div>
     </section>
-    <Clients/>
     </>
   )
 }

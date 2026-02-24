@@ -4,12 +4,12 @@ import React from 'react'
 
 const Clients = () => {
   return (
-    <section className="border-y border-[#283339] bg-[#121212]">
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+    <section className=" bg-[red] h-full">
+    <div className="mx-auto  px-4 sm:px-6 lg:px-8 py-8">
     <div className="flex flex-col lg:flex-row gap-8 items-center justify-between">
-    <div className="flex flex-wrap justify-center gap-8 opacity-60 transition-all text-white duration-500">
+    <div className="flex flex-wrap justify-center gap-8 opacity-60 transition-all text-white duration-500 bg-[#121212]">
 
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2 bg-[#121212]">
     <span className="material-symbols-outlined text-4xl"><InfinityIcon/></span>
     <span className="font-semibold text-xl text-white tracking-tighter">METAWEB</span>
     </div>
@@ -28,7 +28,7 @@ const Clients = () => {
     </div>
     <div className="flex gap-8 sm:gap-12 bg-black">
     <div className="flex flex-col">
-    <span className="text-2xl font-semibold text-white">500+</span>
+    <span className="text-2xl font-semibold text-black">500+</span>
     <span className="text-sm font-medium text-gray-400">Projects Posted</span>
     </div>
     <div className="flex flex-col">
