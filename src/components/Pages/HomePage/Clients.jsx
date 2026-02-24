@@ -28,15 +28,15 @@ const Clients = () => {
     </div>
     <div className="flex gap-8 sm:gap-12 bg-black">
     <div className="flex flex-col">
-    <span className="text-2xl font-bold text-white">500+</span>
+    <span className="text-2xl font-semibold text-white">500+</span>
     <span className="text-sm font-medium text-gray-400">Projects Posted</span>
     </div>
     <div className="flex flex-col">
-    <span className="text-2xl font-bold text-white">24h</span>
+    <span className="text-2xl font-semibold text-white">24h</span>
     <span className="text-sm font-medium text-gray-400">Avg. Response Time</span>
     </div>
     <div className="flex flex-col">
-    <span className="text-2xl font-bold text-white">$10M+</span>
+    <span className="text-2xl font-semibold text-white">$10M+</span>
     <span className="text-sm font-medium text-gray-400">Project Value</span>
     </div>
     </div>

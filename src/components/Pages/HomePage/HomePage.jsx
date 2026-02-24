@@ -8,20 +8,22 @@ import HowWroks from './HowWroks'
 import Experties from './Experties'
 import Testimonials from './Testimonials'
 import Cta from './Cta'
+import FeaturedCompanies from './FeaturedCompanies'
 
 const HomePage = () => {
   const [showForm, setShowForm] = useState(false)
   return (
-    <div className='relative inter'>
+    <div className='relative inter bg-[#F4F5F7]'>
         <Navbar setShowForm={setShowForm} showForm={showForm} />
         <div className='mt-10'>
           <Hero />
           {/* <Clients/> */}
           <HowWroks/>
           <Experties/>
+          <FeaturedCompanies/>
           <Testimonials/>
-          <Cta/>
           <Faqs />
+          <Cta/>
           <Footer/>
         </div>
        

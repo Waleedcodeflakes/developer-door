@@ -10,42 +10,42 @@ const Team = () => {
       name: "Alex Rivera",
       role: "Frontend",
       experience: 5,
-      image: "https://randomuser.me/api/portraits/women/44.jpg",
+      image: "https://images.unsplash.com/photo-1585624882829-f92c2d4cd89d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dGVzdGluZ3xlbnwwfHwwfHx8MA%3D%3D",
     },
     {
       id: 2,
       name: "Jenny Wilson",
       role: "Backend",
       experience: 3,
-      image: "https://randomuser.me/api/portraits/women/68.jpg",
+      image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dGVzdGluZ3xlbnwwfHwwfHx8MA%3D%3D",
     },
     {
       id: 3,
       name: "Jerome Bell",
       role: "Full Stack",
       experience: 2,
-      image: "https://randomuser.me/api/portraits/men/32.jpg",
+      image: "https://images.unsplash.com/photo-1600267147646-33cf514b5f3e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dGVzdGluZ3xlbnwwfHwwfHx8MA%3D%3D",
     },
     {
       id: 4,
       name: "Michael Lee",
       role: "Frontend",
       experience: 4,
-      image: "https://randomuser.me/api/portraits/men/45.jpg",
+      image: "https://plus.unsplash.com/premium_photo-1683121710572-7723bd2e235d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWl8ZW58MHx8MHx8fDA%3D",
     },
     {
       id: 5,
       name: "Sarah Khan",
       role: "Backend",
       experience: 6,
-      image: "https://randomuser.me/api/portraits/women/12.jpg",
+      image: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2ViJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D",
     },
     {
       id: 6,
       name: "David Smith",
       role: "Full Stack",
       experience: 7,
-      image: "https://randomuser.me/api/portraits/men/40.jpg",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2ViJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D",
     },
   ];
 
@@ -90,14 +90,14 @@ const Team = () => {
     <>
     <Navbar/>
      <section className="py-20 bg-[#fff]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className=" mb-16">
-        <h2 className="text-3xl font-bold tracking-tight text-[#333] sm:text-4xl">Our Website Development Team</h2>
-        <p className="mt-4 text-lg text-gray-400 w-full sm:w-[50%]">Meet the experts building the feature of the web. A diverse team of passionate developers dedicated to crafting exceptional digital experience</p>
+        <div className="mx-auto w-[92%] px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-10 mt-15">
+        <h2 className="text-3xl font-semibold tracking-tight text-[#333] sm:text-4xl">Our Website Development Team</h2>
+        <p className="mt-4 text-lg text-[#333333B2] m-auto w-full sm:w-[50%]">Meet the experts building the feature of the web. A diverse team of passionate developers dedicated to crafting exceptional digital experience</p>
         </div>
          <div className="">
       {/* Filters */}
-      <div className="flex flex-wrap gap-4 mb-10">
+      <div className="flex flex-wrap justify-center gap-4 mb-10">
         {Object.keys(filters).map((filter) => (
           <button
             key={filter}
@@ -106,7 +106,7 @@ const Team = () => {
               ${
                 activeFilter === filter
                   ? "bg-[#00BD5F] text-white shadow-md"
-                  : "bg-gray-200 text-gray-600 hover:bg-gray-300"
+                  : "bg-[#6F80950A] text-gray-600 hover:bg-gray-100"
               }`}
           >
             {filter === "All"
@@ -120,18 +120,18 @@ const Team = () => {
       <motion.div
         ref={ref}
         variants={container}
-        initial="hidden"
+        initial="visible"
         animate={inView ? "visible" : "hidden"}
       className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-8">
         {filteredMembers.map((member) => (
           <motion.div
-           ref={ref}
+          ref={ref}
             variants={item}
             transition={{ duration: 0.4, ease: "easeOut" }}
             key={member.id}
-            className="bg-white rounded-2xl p-0 shadow-sm hover:shadow-lg transition duration-300 text-center"
+            className="bg-white rounded-2xl p-0 shadow-[0_2px_12px_0px_#0000000F] hover:shadow-lg transition duration-300 text-center"
           >
-            <div className="flex justify-center mb-4">
+            <div className="flex justify-center">
               <img
                 src={member.image}
                 alt={member.name}
@@ -139,30 +139,16 @@ const Team = () => {
               />
             </div>
 
-            <h3 className="text-lg font-semibold text-gray-800">
+            <div className='p-4 poppins'>
+
+            <h3 className="text-sm text-left font-medium text-[#576679]">
               {member.name}
             </h3>
 
-            {/* <span
-              className={`inline-block mt-2 px-3 py-1 text-xs rounded-full font-medium
-                ${
-                  member.role === "Frontend"
-                    ? "bg-red-100 text-red-500"
-                    : member.role === "Backend"
-                    ? "bg-yellow-100 text-yellow-600"
-                    : "bg-blue-100 text-blue-600"
-                }`}
-            >
-              {member.role}
-            </span>
-
-            <p className="text-sm text-gray-500 mt-3">
-              {member.experience} Years Experience
-            </p> */}
-
-            <button className="mt-5 w-full bg-gray-100 text-gray-700 py-2 rounded-lg hover:bg-gray-200 transition">
+            <button className="mt-8 w-full text-sm font-medium bg-[#00AB390F] border border-[#00AB3933] text-[#00BD5F] py-2 rounded-lg transition">
               View Profile
             </button>
+            </div>
           </motion.div>
         ))}
       </motion.div>

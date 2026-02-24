@@ -54,7 +54,7 @@ const Hero = () => {
     <div className='h-[70vh] sm:h-[90vh] flex items-center bg-no-repeat mont' style={{backgroundImage: `url(${herobg})`, backgroundPosition: 'center', backgroundSize: 'cover'}}>
         {/* mail, phone links */}
         {/* headings */}
-        <div className='ps-4 sm:ps-26 relative z-10 mt-3 sm:-mt-7'>
+        <div className='ps-4 sm:ps-26 relative w-[80%] z-10 mt-3 sm:-mt-7'>
         
          <h1 className="text-white h-[60px] sm:h-[100px] text-3xl sm:text-3xl md:text-3xl lg:text-[48px] font-semibold whitespace-pre-line">
         

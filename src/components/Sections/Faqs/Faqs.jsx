@@ -72,59 +72,70 @@ const [openIndex, setOpenIndex] = useState(null);
 
   return (
     <section className='w-[92%] m-auto my-20'>
-      <div className='text-center'>
-        <h3 className='text-3xl font-semibold tracking-tight text-[#333] sm:text-4xl'>Frequently asked questions</h3>
-        <p className='mt-4 text-lg text-gray-400'>Everything you need to know about hiring on Developer Door.</p>
-      </div>
-      {/* faqs */}
-      <AnimatePresence>
-         <MOTION.div
-            ref={ref}
-            variants={container}
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-         className="w-[95%] md:w-[65%] m-auto mt-8">
-        {faqs.map((faq, index) => (
-            <AnimatePresence key={index}>
-              <MOTION.h2
+      <div className='flex justify-between'>
+        <div className='w-[30%]'>
+          <div>
+             <div className='text-left'>
+      <p className='text-base sm:text-lg text-[#00BD5F] font-semibold mb-3'>Support</p>
+          <h3 className='text-3xl font-semibold tracking-tight text-[#333] sm:text-4xl'>Frequently asked questions</h3>
+          <p className='mt-4 text-lg text-[#475467]'>Everything you need to know about hiring on Developer Door.</p>
+        </div>
+          </div>
+        </div>
+      <div className='w-[70%]'>
+       
+        {/* faqs */}
+        <AnimatePresence>
+          <MOTION.div
               ref={ref}
-            variants={item}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-               className='text-black text-base sm:text-[18px] poppins-semibold mb-3 mt-4'>{faq.title}</MOTION.h2>
-            <MOTION.div
-            ref={ref}
-            variants={item}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            
-            className={`rounded-lg mb-2 cursor-pointer transition-colors duration-300 ${ openIndex === index ? "bg-[#75bee23e]" : "bg-[#fff]"}`}
-            >
-            <div onClick={() => toggleFAQ(index)} className="flex py-5 px-4 sm:px-8 gap-6 sm:items-center text-black text-base sm:text-[18px] poppins-medium" style={{textAlign: 'left', alignItems: 'flex-start'}}>
-                <span
-                className={`transition-transform w-fit duration-300 ${
-                    openIndex === index ? "rotate-0" : "rotate-90"
-                }`}
-                >
-                {openIndex === index ? <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M7 11H15M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11Z" stroke="#00BD5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
- : <img src={plus} />}
-                </span>
-                <span className='w-[92%] sm:w-fit'>{faq.question}</span>
-            </div>
-            <div
-                className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                openIndex === index
-                    ? "min-h-fit opacity-100 mt-2"
-                    : "max-h-0 opacity-0"
-                }`}
-            >
-                <p style={{textAlign: 'left'}} className="text-[#475467] h-full px-8 pb-9 pt-1 poppins-regular text-sm sm:text-[16px] leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }}></p>
-            </div>
-            </MOTION.div>
-            </AnimatePresence>
-        ))}
-        </MOTION.div>
-      </AnimatePresence>
+              variants={container}
+              initial="hidden"
+              animate={inView ? "visible" : "hidden"}
+          className="w-[95%] md:w-[65%] m-auto mt-8">
+          {faqs.map((faq, index) => (
+              <AnimatePresence key={index}>
+                <MOTION.h2
+                ref={ref}
+              variants={item}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+                className='text-black text-base sm:text-[18px] poppins-semibold mb-3 mt-4'>{faq.title}</MOTION.h2>
+              <MOTION.div
+              ref={ref}
+              variants={item}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              
+              className={`rounded-lg mb-2 cursor-pointer transition-colors duration-300 ${ openIndex === index ? "bg-[#fff]" : ""}`}
+              >
+              <div onClick={() => toggleFAQ(index)} className="flex justify-between py-5 px-4 sm:px-8 gap-6 sm:items-center text-[#101828] text-base sm:text-[18px] font-semibold" style={{textAlign: 'left', alignItems: 'flex-start'}}>
+                  <span className='w-[92%] sm:w-fit '>{faq.question}</span>
+                  <span
+                  className={`transition-transform w-fit duration-300 ${
+                      openIndex === index ? "rotate-0" : "rotate-90"
+                  }`}
+                  >
+                  {openIndex === index ? <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 11H15M21 11C21 16.5228 16.5228 21 11 21C5.47715 21 1 16.5228 1 11C1 5.47715 5.47715 1 11 1C16.5228 1 21 5.47715 21 11Z" stroke="#00BD5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                : <img src={plus} />}
+                  </span>
+              </div>
+              <div
+                  className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                  openIndex === index
+                      ? "min-h-fit opacity-100 mt-2"
+                      : "max-h-0 opacity-0"
+                  }`}
+              >
+                  <p style={{textAlign: 'left'}} className="text-[#475467] h-full px-8 pb-9 pt-1 poppins-regular text-sm sm:text-[16px] leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }}></p>
+              </div>
+              </MOTION.div>
+              </AnimatePresence>
+          ))}
+          </MOTION.div>
+        </AnimatePresence>
+
+      </div>
+      </div>
      
     </section>
   )
