@@ -4,6 +4,7 @@ import profile from '../../../assets/images/hero-banner2.jpg'
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react'
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import TestimonialSlider from '../../Sections/TestomonialCards';
 const Testimonials = () => {
     const reviews = [
         {
@@ -69,7 +70,7 @@ const Testimonials = () => {
     <h2 className="text-3xl font-semibold tracking-tight text-[#fff] sm:text-4xl">Client Success Stories</h2>
     <p className="mt-1 text-base font-regular text-[#FFFFFFB2]">See how businesses are scaling faster with vetted tech partners.</p>
     </div>
-    <motion.div 
+    {/* <motion.div 
      ref={ref}
     variants={container}
     initial="hidden"
@@ -114,7 +115,8 @@ const Testimonials = () => {
         </motion.div>
     ))}
 
-    </motion.div>
+    </motion.div> */}
+    <TestimonialSlider/>
     </div>
     </section>
   )

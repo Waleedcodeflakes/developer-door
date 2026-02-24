@@ -13,7 +13,7 @@ function ScrollToTop() {
   useEffect(() => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // smooth slide to top
+      behavior: "smooth",
     });
   }, [pathname]);
 
