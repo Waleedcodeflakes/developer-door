@@ -1,7 +1,8 @@
 import { MessageCircle, MessageSquare, NotepadText, ShieldCheck, VerifiedIcon } from 'lucide-react'
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import AnimatedArrows from './AnimatedArrows';
 
 const HowWroks = () => {
     const steps = [
@@ -24,14 +25,14 @@ const HowWroks = () => {
 
     const { ref, inView } = useInView({
             triggerOnce: true, // animate only first time (optional)
-            threshold: 0.2,    // 20% of the section visible = trigger
+            threshold: 0.1,    // 20% of the section visible = trigger
         });
     
         const container = {
             hidden: {},
             visible: {
                 transition: {
-                staggerChildren: 0.3, // gap between cards
+                staggerChildren: 0.1, // gap between cards
                 },
             },
         };
@@ -40,6 +41,25 @@ const HowWroks = () => {
             hidden: { y: 50, opacity: 0 },
             visible: { y: 0, opacity: 1 },
         };
+
+     const lineref = useRef(null)
+    const [animate, setAnimate] = useState(false)
+    
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setAnimate(false)
+            requestAnimationFrame(() => setAnimate(true))
+          }
+        },
+        { threshold: 0.3 }
+      )
+    
+      if (lineref.current) observer.observe(lineref.current)
+      return () => observer.disconnect()
+    }, [])
+
   return (
     <section className="py-20">
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -54,13 +74,14 @@ const HowWroks = () => {
     initial="hidden"
     animate={inView ? "visible" : "hidden"}
     className="grid grid-cols-1 md:grid-cols-3 relative gap-8">
-        <svg className='absolute left-60 top-20' width="330" height="12" viewBox="0 0 330 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M10 4.77356L0 5.67436e-05V11.5471L10 6.77356V4.77356ZM9 5.77356V6.77356H330V5.77356V4.77356H9V5.77356Z" fill="#00BD5F"/>
-        </svg>
-
-        <svg className='absolute right-60 top-20' width="330" height="12" viewBox="0 0 330 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M320 6.77356L330 11.5471V5.67436e-05L320 4.77356V6.77356ZM0 5.77356V6.77356H321V5.77356V4.77356H0V5.77356Z" fill="#00BD5F"/>
-        </svg>
+        <div className='absolute left-0 top-0'>
+           
+           <AnimatedArrows/>
+        </div>
+        <div className='absolute left-104 top-0'>
+           
+           <AnimatedArrows />
+        </div>
 
         {steps.map((st, idx) => (
             <motion.div 
