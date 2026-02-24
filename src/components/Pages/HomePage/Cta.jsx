@@ -10,7 +10,7 @@ const Cta = () => {
           <div className='flex items-start gap-4 w-full sm:w-[50%]'>
             <img className=' hidden sm:block' src={paper} alt="paper plan" />
             <div>
-             <h3 className='text-3xl font-medium tracking-tight text-[#fff] sm:text-4xl'>Ready to build something amazing?</h3>
+             <h3 className='text-3xl font-medium tracking-tight text-[#fff] sm:text-4xl'>Ready to build something amazing?</h3>
           <p className='mt-4 text-sm sm:text-lg text-[#fff]'>Join <span className='font-bold'>500+ companies</span> hiring top-tier tech talent today.<br/> No upfront fees, just results.</p>
 
             </div>

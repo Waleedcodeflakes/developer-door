@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { motion as MOTION } from "framer-motion";
 import { ChevronRight, Code, Search, SearchIcon } from "lucide-react";
-import herobg from '../../../assets/images/hero-banner2.jpg'
+import herobg from '../../../assets/images/hero-banner3.jpg'
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Clients from "../../Pages/HomePage/Clients";

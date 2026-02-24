@@ -12,7 +12,7 @@ const testimonials = [
   },
   {
     id: 2,
-    stars: 5,
+    stars: 4,
     quote:
       "The quality of developers we found through Developer Door was exceptional. Our startup went from zero to product in 6 weeks. Couldn't have done it without them.",
     name: "Marcus Reeve",
@@ -21,7 +21,7 @@ const testimonials = [
   },
   {
     id: 3,
-    stars: 5,
+    stars: 4,
     quote:
       "We scaled our engineering team by 3x in a single quarter. Developer Door's vetting process saved us months of recruiting headaches and the talent quality speaks for itself.",
     name: "Priya Mehta",
