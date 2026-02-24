@@ -15,7 +15,7 @@ const Cta = () => {
 
             </div>
           </div>
-          <div className='block sm:flex items-start gap-4'>
+          <div className='block sm:flex items-start gap-4 w-full sm:w-[40%] md:w-[35%]'>
             <button className='text-white w-full mt-4 sm:mt-0 font-semibold border-[2px] border-[#fff] bg-[#00BD5F] rounded-full py-3 px-8'>Post a Job for Free</button>
             <button className='text-[#00BD5F] w-full mt-4 sm:mt-0 font-semibold border bg-[#fff] rounded-full py-3 px-8'>Talk to Sales</button>
           </div>
