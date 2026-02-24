@@ -18,7 +18,7 @@ const HomePage = () => {
         <div className='mt-10'>
           <Hero />
         </div>
-        <div className='mt-20'>
+        <div className='mt-24 sm:mt-20'>
           <Clients/>
 
         </div>

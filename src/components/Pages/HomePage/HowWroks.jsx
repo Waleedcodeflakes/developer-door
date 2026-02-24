@@ -74,11 +74,11 @@ const HowWroks = () => {
     initial="hidden"
     animate={inView ? "visible" : "hidden"}
     className="grid grid-cols-1 md:grid-cols-3 relative gap-8">
-        <div className='absolute left-0 top-0'>
+        <div className='hidden sm:block absolute left-0 top-0'>
            
            <AnimatedArrows/>
         </div>
-        <div className='absolute left-104 top-0'>
+        <div className='hidden sm:block absolute left-104 top-0'>
            
            <AnimatedArrows />
         </div>

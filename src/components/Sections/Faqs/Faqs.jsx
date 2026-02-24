@@ -72,8 +72,8 @@ const [openIndex, setOpenIndex] = useState(null);
 
   return (
     <section className='w-[92%] m-auto my-20'>
-      <div className='flex justify-between'>
-        <div className='w-[30%]'>
+      <div className='block sm:flex justify-between'>
+        <div className='w-full sm:w-[30%]'>
           <div>
              <div className='text-left'>
       <p className='text-base sm:text-lg text-[#00BD5F] font-semibold mb-3'>Support</p>
@@ -82,7 +82,7 @@ const [openIndex, setOpenIndex] = useState(null);
         </div>
           </div>
         </div>
-      <div className='w-[70%]'>
+      <div className='w-full sm:w-[70%]'>
        
         {/* faqs */}
         <AnimatePresence>

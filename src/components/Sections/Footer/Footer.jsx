@@ -11,8 +11,8 @@ const Footer = ({ setShowForm }) => {
     return (
         <section className='w-full bg-[#000A03]'>
             <div className='w-[92%] m-auto'>
-                <div className='flex justify-end mb-8 pt-15'>
-                    <div className='flex gap-7 text-[#E6E6E682] text-sm font-regular'>
+                <div className='flex justify-center sm:justify-end mb-8 pt-15'>
+                    <div className='flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-7 text-[#E6E6E682] text-sm font-regular'>
                         <a href="https://wa.me/+223 456 789" target="_blank" rel="noopener noreferrer"><div className='flex gap-2 items-center'>
                             <img src={call} alt="phone icon" />
                             <p>+223 456 789</p>

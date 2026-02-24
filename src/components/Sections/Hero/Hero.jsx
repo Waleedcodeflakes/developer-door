@@ -12,7 +12,7 @@ const Hero = () => {
       
       const navigate = useNavigate();
 
-      const text = `Connect with <span class="text-[#00BD5F]">Top-Rated\n Tech Agencies</span> Worldwide`;
+      const text = `Connect with <span class="text-[#00BD5F]">Top-Rated Tech Agencies</span> Worldwide`;
       
       useEffect(() => {
         if (index < text.length) {
@@ -54,9 +54,9 @@ const Hero = () => {
     <div className='h-[70vh] sm:h-[85vh] flex items-center bg-no-repeat mont' style={{backgroundImage: `url(${herobg})`, backgroundPosition: 'center', backgroundSize: 'cover'}}>
         {/* mail, phone links */}
         {/* headings */}
-        <div className='ps-4 sm:ps-26 relative w-[80%] z-10 mt-3 sm:-mt-7'>
+        <div className='ps-4 sm:ps-26 relative w-full sm:w-[80%] z-10 mt-3 sm:-mt-7'>
         
-         <h1 className="text-white h-[60px] sm:h-[100px] text-3xl sm:text-3xl md:text-3xl lg:text-[48px] font-semibold whitespace-pre-line" dangerouslySetInnerHTML={{__html: displayText}}></h1>
+         <h1 className="text-white h-[100px] sm:h-[100px] w-full sm:w-[60%] text-3xl sm:text-3xl md:text-3xl lg:text-[48px] font-semibold whitespace-pre-line" dangerouslySetInnerHTML={{__html: displayText}}></h1>
         <motion.p
           initial={{ y: 80, opacity: 0 }} 
       animate={{ y: 0, opacity: 1 }}
@@ -64,7 +64,7 @@ const Hero = () => {
       transition={{ duration: 1, ease: "easeInOut" }}
         className='font-medium h-[110px] sm:h-[90px] text-[#b5b5b5] mt-4 text-basse sm:text-lg w-full sm:w-[59%]'>{paragraphText}</motion.p
         >
-        <div className="bg-[#FFFFFF14] w-[40%] px-4.5 py-3 border-[#FFFFFF4D] border-b backdrop-blur-[44px]">
+        <div className="bg-[#FFFFFF14] w-[90%] sm:w-[57%] px-4.5 py-3 border-[#FFFFFF4D] border-b backdrop-blur-[44px]">
             <div className="flex items-center gap-3">
                 <SearchIcon className="text-white" />
                 <input type="text" placeholder="Search by skill or company name..." className="placeholder:text-white w-full text-white border-none outline-none" />
@@ -76,13 +76,10 @@ const Hero = () => {
       exit={{ y: -50, opacity: 0 }}
       transition={{ duration: 1, ease: "easeInOut" }}
         className='flex items-center gap-4 mt-8'>
-            <button onClick={() => navigate('/team')} className='text-[#00BD5F] font-semibold px-4 py-2.5 rounded-lg bg-[#00AB391A] border border-[#00BD5F] transition-colors duration-300 flex items-center gap-3.5'>Browse Companies <span className="bg-[#00BD5F20] rounded-full w-5 h-5 flex items-center justify-center"><ChevronRight /></span></button>
-            <button onClick={() => {
-              const reg = document.getElementById('register')
-              reg?.scrollIntoView({ behavior: 'smooth' })
-            }}
+            <button onClick={() => navigate('/team')} className='text-[#00BD5F] font-semibold text-sm sm:text-base px-2 sm:px-4 py-2.5 rounded-lg bg-[#00AB391A] border border-[#00BD5F] transition-colors duration-300 flex items-center gap-2 sm:gap-3.5'>Browse Companies <span className="bg-[#00BD5F20] rounded-full w-5 h-5 flex items-center justify-center"><ChevronRight /></span></button>
+            <button onClick={() => navigate('/team')}
             className="relative px-4 py-2.5 rounded-lg font-semibold bg-[#00BD5F] transition-colors duration-300">
-                <span className="relative z-10 text-white flex items-center justify-center gap-3">
+                <span className="relative z-10 text-white text-sm sm:text-base flex items-center justify-center gap-3">
                     Find Agencies
                      <span className="bg-[#FFFFFF50] rounded-full w-5 h-5 flex items-center justify-center"><ChevronRight /></span>
                 </span>

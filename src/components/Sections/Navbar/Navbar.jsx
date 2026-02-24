@@ -17,7 +17,7 @@ const Navbar = ({showForm, setShowForm}) => {
         )}
             <div className='w-[92%] m-auto gap-10 flex justify-between items-center py-2 md:py-3'>
                 <div className='cursor-pointer w-full sm:w-[18%]'>
-                    <h1 onClick={() => navigate('/')} className='font-semibold text-[#00BD5F] text-[28px] sm:text-[22px]'>Developer Door</h1>
+                    <h1 onClick={() => navigate('/')} className='font-extrabold text-[#00BD5F] text-[20px] sm:text-[20px]'>Developer Door</h1>
                 </div>
                 <nav className='md:block'>
                         <ul className='hidden md:flex gap-12 text-[#0F1C2C] font-medium text-sm lg:text-[16px]'>
@@ -45,10 +45,10 @@ const Navbar = ({showForm, setShowForm}) => {
                         <nav className='mt-10'>
                             <ul className='flex flex-col gap-8 font-medium'>
                                  <li className='inline-block font-medium text-sm lg:text-[16px]  py-0 cursor-pointer'><NavLink to="/" className={({ isActive }) =>`${isActive ? 'text-[#fff] border-b-[3px] border-[#fff] font-medium' : 'text-[#fff] '}`}>Home</NavLink></li>
-                                <li className='inline-block font-medium text-sm lg:text-[16px]  py-0 cursor-pointer'> <NavLink  to="/features" className={({ isActive }) =>`${isActive ? 'text-[#fff] border-b-[3px] border-[#fff] font-medium' : 'text-[#fff] '}`}>Features</NavLink></li>
+                                <li className='inline-block font-medium text-sm lg:text-[16px]  py-0 cursor-pointer'> <NavLink  to="/team" className={({ isActive }) =>`${isActive ? 'text-[#fff] border-b-[3px] border-[#fff] font-medium' : 'text-[#fff] '}`}>Development Team</NavLink></li>
                                 {/* <li className='inline-block  text-sm lg:text-[16px]  py-0 cursor-pointer'> <NavLink  to="/privacy-policy" className={({ isActive }) =>`${isActive ? 'text-[#fff] border-b-[3px] border-[#fff] font-medium' : 'text-[#fff] '}`}>Privacy Policy</NavLink></li> */}
                                 <li className='inline-block  text-sm lg:text-[16px]  py-0 cursor-pointer'> <NavLink  to="/faqs" className={({ isActive }) =>`${isActive ? 'text-[#fff] border-b-[3px] border-[#fff] font-medium' : 'text-[#fff] '}`}>FAQs</NavLink></li>
-                               <button onClick={() => {setNavLinks(false) ;setShowForm(true)}} className='inline-block text-[#00BD5F] font-medium text-sm lg:text[17px] text-center cursor-pointer bg-[#fff] py-[10px] rounded-[8px]'><p>Find Agencies</p></button>
+                               <button onClick={() => {navigate('/team')}} className='inline-block text-[#00BD5F] font-medium text-sm lg:text[17px] text-center cursor-pointer bg-[#fff] py-[10px] rounded-[8px]'><p>Find Agencies</p></button>
                             </ul>
                         </nav>
                     </div>

@@ -195,7 +195,7 @@ export default function TestimonialSlider() {
                       height: "8px",
                       background:
                         i === current
-                          ? "linear-gradient(90deg, #34d399, #10b981)"
+                          ? "#00BD5F"
                           : "rgba(255,255,255,0.2)",
                       boxShadow: i === current ? "0 0 10px rgba(52,211,153,0.4)" : "none",
                     }}
@@ -220,7 +220,7 @@ export default function TestimonialSlider() {
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.background = "rgba(52,211,153,0.15)";
-                      e.currentTarget.style.borderColor = "rgba(52,211,153,0.4)";
+                      e.currentTarget.style.borderColor = "#00BD5F";
                       e.currentTarget.style.boxShadow = "0 0 16px rgba(52,211,153,0.2)";
                     }}
                     onMouseLeave={(e) => {

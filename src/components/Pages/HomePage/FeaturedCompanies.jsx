@@ -65,9 +65,9 @@ const FeaturedCompanies = () => {
 
          <div className=" mb-6">
         <h2 className="text-3xl font-semibold tracking-tight text-[#333] sm:text-[40px]">Featured Companies</h2>
-        <div className='flex items-end justify-between w-full'>
+        <div className='block sm:flex items-end justify-between w-full'>
         <p className="mt-4 text-lg text-[#333333B2] w-full sm:w-[50%]">Meet the experts building the feature of the web. A diverse team of passionate developers dedicated to crafting exceptional digital experience</p>
-        <p onClick={() => navigate('/team')} className='flex items-center gap-3 text-[#333333B2] group cursor-pointer'>
+        <p onClick={() => navigate('/team')} className='flex items-center gap-3 text-[#333333B2] group cursor-pointer mt-4 sm:mt-0'>
             <span className='poppins font-medium text-sm sm:text-base group-hover:underline'>View All Members</span>
             <ArrowRight className='w-5 h-5' />
         </p>
