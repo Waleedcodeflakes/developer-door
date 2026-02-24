@@ -51,7 +51,7 @@ const Hero = () => {
    <>
     <section className='bg-linear-to-r from-[#000000] to-[#000000cc] w-full relative'>
         <div className="absolute inset-0 bg-gradient-to-r z-1 from-black to-black/10" />
-    <div className='h-[70vh] sm:h-[90vh] flex items-center bg-no-repeat mont' style={{backgroundImage: `url(${herobg})`, backgroundPosition: 'center', backgroundSize: 'cover'}}>
+    <div className='h-[70vh] sm:h-[85vh] flex items-center bg-no-repeat mont' style={{backgroundImage: `url(${herobg})`, backgroundPosition: 'center', backgroundSize: 'cover'}}>
         {/* mail, phone links */}
         {/* headings */}
         <div className='ps-4 sm:ps-26 relative w-[80%] z-10 mt-3 sm:-mt-7'>

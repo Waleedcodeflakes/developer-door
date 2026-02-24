@@ -17,7 +17,11 @@ const HomePage = () => {
         <Navbar setShowForm={setShowForm} showForm={showForm} />
         <div className='mt-10'>
           <Hero />
+        </div>
+        <div className='mt-20'>
           <Clients/>
+
+        </div>
           <HowWroks/>
           <Experties/>
           <FeaturedCompanies/>
@@ -25,7 +29,6 @@ const HomePage = () => {
           <Faqs />
           <Cta/>
           <Footer/>
-        </div>
        
     </div>
   )
